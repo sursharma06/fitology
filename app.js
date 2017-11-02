@@ -257,6 +257,18 @@ app.get('/recipe', function (req, res, next) {
     });
 });
 
+app.get('/breakfast', function (req, res) {
+  res.render('breakfast');
+});
+
+app.get('/lunch', function (req, res) {
+  res.render('lunch');
+});
+
+app.get('/dinner', function (req, res) {
+  res.render('dinner');
+});
+
 app.listen(port, function () {
   console.log('connecting to port ', port);
 });
