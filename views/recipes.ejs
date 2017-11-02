@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <!-- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css"> -->
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <style>
+  .parallax {
+      /* The image used */
+      background-image: url("https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+
+      /* Set a specific height */
+      min-height: 500px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  </style>
+  </head>
+
+  <body style="background-color:#F3EAF4">
+    
+    <div class="container">
+    <h1>Share your recipes</h1>
+
+    <form action="/users/<%=user.id%>/recipes" method="post">
+      <input type="text" name="name" placeholder="Name of recipe">
+      <input type="text" name="ingredients" placeholder="Ingredients">
+      <input type="text" name="directions" placeholder="Directions">
+      <input type="submit" value="Add Recipe">
+    </form>
+
+
+
+<!-- <%if (recipes) {%>
+    <ul>
+      <% for(var i = 0; i<recipes.length;i++){ %>
+        <li><%=recipes[i].name%></li>
+        <li><%=recipes[i].ingredients%></li>
+        <li><%=recipes[i].directions%></li>
+        <% } %>
+    </ul>
+    <%}%> -->
+<div class="parallax">
+    <div class="container">
+<%if (recipes) {%>
+  <h1>Receipes</h1>
+  <% for(var i = 0; i<recipes.length;i++){ %>
+    <div class="column">
+          <div class="col s4">
+            <div class="card-panel indigo lighten-5">
+              <span class="black-text">
+                <p>Name:</p><%=recipes[i].name%>
+                <p>Ingredients:</p><%=recipes[i].ingredients%>
+                <p>Directions:</p><%=recipes[i].directions%>
+              </span>
+            </div>
+          </div>
+        </div>
+<% } %>
+<% } %>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+  </body>
+</html>

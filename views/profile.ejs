@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body style="background-color:#F3EAF4">
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log out</a>
+            </li>
+          </ul>
+        </nav>
+        <img style="height:50px"src="img.jpg">
+      </header>
+  </div>
+
+    <div class="container">
+<h1 style="font-color:">Welcome, <%=user.name%></h1>
+<div class="card">
+  <h4 class="card-header">Workouts</h4>
+  <div class="card-body">
+    <img class="card-img" src="workout1.jpg" alt="jogging">
+    <h4 class="card-title">Choose a Muscle Group</h4>
+    <a href="/arms" class="btn btn-primary">Arms</a>
+    <a href="/chest" class="btn btn-primary">Chest</a>
+    <a href="/abs" class="btn btn-primary">Abs</a>
+    <a href="/glutes" class="btn btn-primary">Glutes</a>
+    <a href="/legs" class="btn btn-primary">Legs</a>
+  </div>
+</div>
+
+</div>
+<div class="container">
+<div class="card">
+  <h4 class="card-header">Nutrition</h4>
+  <div class="card-body">
+    <img class="card-img" src="veggies.jpg" alt="vegetables">
+    <h4 class="card-title">Choose a Meal</h4>
+    <a href="/breakfast" class="btn btn-primary">Breakfast</a>
+    <a href="/lunch" class="btn btn-primary">Lunch</a>
+    <a href="/dinner" class="btn btn-primary">Dinner</a>
+    <a href="users/<%=user.id%>/recipes" class="btn btn-primary">Add your recipes</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="container">
+  <footer class="footer">
+    <img style="height:40px"src="img.jpg">
+  </footer>
+</div>
+
+  </body>
+</html>

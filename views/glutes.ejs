@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Glutes</title>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+</script>
+  </head>
+  <body style="background-color:#F3EAF4">
+    <h1>Glutes</h1>
+<!-- <ul>
+<% for (var i =0; i< rows.length; i++) { %>
+  <li><%= rows[i].name %></li>
+  <img src='<%= rows[i].cover_url%>'>
+  <video src="<%= rows[i].video_url%>" autoplay></video>
+<% } %>
+</ul> -->
+
+<ul class="collapsible popout" data-collapsible="accordion">
+  <% for (var i =0; i< rows.length; i++) { %>
+    <li>
+      <div class="collapsible-header"><%= rows[i].name %></div>
+      <div class="collapsible-body">
+        <video class="responsive-video" controls style="width:1000px;padding-left:100px">
+    <source src="<%= rows[i].video_url%>" type="video/mp4">
+  </video></div>
+    </li>
+    <% } %>
+    </ul>
+
+
+
+
+
+  </body>
+</html>
